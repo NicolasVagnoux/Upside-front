@@ -21,21 +21,23 @@ const ProjectCard = ({
         {projectDesc}
       </p>
       {/* <p>{client}</p> */}
-      <p>{subsidiary}</p>
       {/* <p>{startDate.slice(0, 10).split("-").reverse().join("/")}</p>
       <p>{finalDate.slice(0, 10).split("-").reverse().join("/")}</p> */}
-      <p>
-        {Math.abs(
-          new Date(finalDate).getTime() - new Date(startDate).getTime()
-        ) /
-          (1000 * 3600 * 24)}{" "}
-        days left
-      </p>
+
       <div className="flex flex-col-reverse items-center justify-around">
-        <ProgressBar bgcolor={"red"} completed={progress} />
+        <ProgressBar bgcolor="red" completed={progress} />
         <p className="text-xs text-slate-400">{progress}%</p>
       </div>
-
+      <div className="flex justify-around">
+        <p>
+          {Math.abs(
+            new Date(finalDate).getTime() - new Date(startDate).getTime()
+          ) /
+            (1000 * 3600 * 24)}{" "}
+          days left
+        </p>
+        <p>{subsidiary}</p>
+      </div>
       {/* <p>{industryTag}</p> */}
       {/* <p>{projectManager}</p> */}
     </div>
@@ -46,14 +48,10 @@ ProjectCard.propTypes = {
   nameProject: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   projectDesc: PropTypes.string.isRequired,
-  client: PropTypes.string.isRequired,
   subsidiary: PropTypes.string.isRequired,
   startDate: PropTypes.string.isRequired,
   finalDate: PropTypes.string.isRequired,
   progress: PropTypes.number.isRequired,
-  color: PropTypes.string.isRequired,
-  projectManager: PropTypes.string.isRequired,
-  industryTag: PropTypes.string.isRequired,
 };
 
 export default ProjectCard;

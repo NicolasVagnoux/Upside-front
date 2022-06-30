@@ -15,7 +15,7 @@ const Navbar = () => {
       <ul className="flex flex-col items-center justify-center gap-8">
         {navbar &&
           navbar.map((item) => (
-            <Link to={item.link}>
+            <Link key={item.id} to={item.link}>
               <img className="w-[25px] logo-shadow" src={item.src} alt="img" />
             </Link>
           ))}

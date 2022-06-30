@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
+import axios from "axios";
 import ProgressBar from "./ProgressBar";
 
 const ProjectCard = ({
+  id,
   client,
   nameProject,
   image,
@@ -21,14 +23,29 @@ const ProjectCard = ({
     return Math.round(date);
   };
 
+  const [deleteModal, setDeleteModal] = useState(false);
+
+  const deleteProject = async () => {
+    try {
+      await axios.delete(`http://localhost:3000/api/projects/${id}`);
+      setDeleteModal(false);
+      window.location.reload(false);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
   return (
     <div className="bg-white w-[300px] h-[350px] rounded-lg flex flex-col justify-around items-start shadow-lg px-6 py-6 relative">
-      <img
-        src="../../icons/close.png"
-        width={16}
-        alt="icon"
+      <button
+        onClick={() => {
+          setDeleteModal(true);
+        }}
         className="absolute top-3 right-3"
-      />
+        type="button"
+      >
+        <img src="../../icons/close.png" width={16} alt="icon" />
+      </button>
       <div className="w-20 h-20">
         <img src={image} alt="company logo" />
       </div>
@@ -61,11 +78,35 @@ const ProjectCard = ({
           {subsidiary}
         </p>
       </div>
+      {/* Modale de suppression */}
+      {deleteModal && (
+        <div className="fixed z-10 top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] w-[380px] h-[150px] flex flex-col justify-around items-center bg-white text-center font-title shadow-2xl rounded-md p-4">
+          <p>
+            Êtes-vous sûr(e) de vouloir supprimer ce projet ?<br />
+            Cette décision est irréversible.
+          </p>
+          <div className="flex gap-24">
+            <button className="text-xl" onClick={deleteProject} type="button">
+              Oui
+            </button>
+            <button
+              className="text-xl"
+              onClick={() => {
+                setDeleteModal(false);
+              }}
+              type="button"
+            >
+              Non
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
 
 ProjectCard.propTypes = {
+  id: PropTypes.number.isRequired,
   client: PropTypes.string.isRequired,
   industryTag: PropTypes.string.isRequired,
   projectManager: PropTypes.string.isRequired,

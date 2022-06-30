@@ -21,7 +21,7 @@ const Articles = () => {
           <CardContent>
             <>
               <Swiper
-                direction={"vertical"}
+                direction="vertical"
                 pagination={{
                   clickable: true,
                 }}

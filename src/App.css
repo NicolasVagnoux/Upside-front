@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,400;0,700;1,400&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -17,5 +19,8 @@
   }
   .logo-shadow {
     filter: drop-shadow(0px 0px 4px black);
+  }
+  .box-shadow {
+    box-shadow: 0px 0px 5px 2px grey;
   }
 }

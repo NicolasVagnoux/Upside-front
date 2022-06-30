@@ -12,7 +12,7 @@ const navbar = [
   {
     id: 3,
     src: "./assets/editer.svg",
-    link: "",
+    link: "/newproject",
   },
   {
     id: 4,

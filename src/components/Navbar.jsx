@@ -16,7 +16,11 @@ const Navbar = () => {
         {navbar &&
           navbar.map((item) => (
             <Link to={item.link}>
-              <img className="w-[25px] logo-shadow" src={item.src} alt="img" />
+              <img
+                className="w-[25px] logo-shadow hover:scale-110 transition"
+                src={item.src}
+                alt="img"
+              />
             </Link>
           ))}
       </ul>

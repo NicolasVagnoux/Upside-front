@@ -40,7 +40,7 @@ const ProjectCard = ({
       </div>
       <div className="flex justify-between w-full">
         <p className="flex gap-1 px-2 py-0.5 rounded-md bg-gray-400/25 text-slate-500">
-          <img src="../../icons/time.png" width={24} />
+          <img src="../../icons/time.png" width={24} alt="icon" />
           {Math.abs(
             new Date(finalDate).getTime() - new Date(startDate).getTime()
           ) /
@@ -48,7 +48,7 @@ const ProjectCard = ({
           days left
         </p>
         <p className="flex items-center">
-          <img src="../../icons/pin.png" width={24} />
+          <img src="../../icons/pin.png" width={24} alt="icon" />
           {subsidiary}
         </p>
       </div>

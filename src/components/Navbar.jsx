@@ -20,11 +20,11 @@ const Navbar = () => {
             </Link>
           ))}
       </ul>
-        <img
-          className="w-[30px] logo-shadow cursor-pointer"
-          src="./assets/logout.svg"
-          alt="logout"
-        />
+      <img
+        className="w-[30px] logo-shadow cursor-pointer"
+        src="./assets/logout.svg"
+        alt="logout"
+      />
     </div>
   );
 };

@@ -1,11 +1,15 @@
 import React from "react";
+import Navbar from "./Navbar";
 import ProjectList from "./ProjectList";
 
 const Home = () => {
   return (
-    <div className="pl-[120px]">
-      <ProjectList />
-    </div>
+    <>
+      <Navbar />
+      <div className="pl-[120px]">
+        <ProjectList />
+      </div>
+    </>
   );
 };
 

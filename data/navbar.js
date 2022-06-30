@@ -21,7 +21,7 @@ const navbar = [
   },
   {
     src: "./assets/settings.svg",
-    link: "",
+    link: "/settings",
   },
 ];
 

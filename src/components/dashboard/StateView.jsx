@@ -17,7 +17,7 @@ const theme = createTheme({
 });
 
 // ----------------------------------------------
-function CircularProgressWithLabel(props, { value }) {
+function CircularProgressWithLabel(props) {
   return (
     <Box sx={{ position: "relative", display: "inline-flex" }}>
       <CircularProgress variant="determinate" {...props} />
@@ -39,7 +39,7 @@ function CircularProgressWithLabel(props, { value }) {
           color="text.secondary"
           className="pl-24 pt-4"
         >
-          {`${Math.round({ value })}%`}
+          {`${Math.round(props.value)}%`}
         </Typography>
       </Box>
     </Box>

@@ -2,11 +2,9 @@ import React from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
-// import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-// import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-// import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
-// import ProjectDesc from "./ProjectDesc";
+import ProjectDesc from "./ProjectDesc";
 
 // ----- Color theme provider -----
 const theme = createTheme({
@@ -59,6 +57,9 @@ const ProjectCard = () => {
             {/* {isClicked && <ProjectDesc />} */}
           </Card>
         </ThemeProvider>
+
+        {/* ----- CARD modal ----- */}
+        <ProjectDesc open={open} handleClose={handleClose} />
       </div>
     </div>
   );

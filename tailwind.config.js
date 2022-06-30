@@ -13,6 +13,9 @@ module.exports = {
         text: "'Helvetica'",
         title: "'Lato', 'sans-serif'",
       },
+      animation: {
+        text: "text 5s ease infinite",
+      },
     },
   },
 };

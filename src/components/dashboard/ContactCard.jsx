@@ -10,7 +10,7 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 const theme = createTheme({
   palette: {
     background: {
-      paper: "#ffb74d",
+      paper: "#9CC8F6",
     },
   },
 });

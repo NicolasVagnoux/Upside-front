@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from "react";
 
 const FilterBar = ({ containsWord, handleContainsWord }) => {
@@ -17,26 +18,26 @@ const FilterBar = ({ containsWord, handleContainsWord }) => {
   ];
 
   return (
-    <div className="fixed w-full z-10 h-14 bg-white drop-shadow ml-20 flex justify-around font-title">
+    <div className="fixed z-10 flex justify-around w-full ml-20 bg-white h-14 drop-shadow font-title">
       {/* Search bar */}
-      <div className="items-center rounded flex ">
+      <div className="flex items-center rounded ">
         <input
           type="text"
           placeholder=" Search a project"
-          className="rounded align-middle w-56 bg-slate-200"
+          className="w-56 align-middle rounded bg-slate-200"
           value={containsWord}
           onChange={(e) => handleContainsWord(e)}
         />
       </div>
       {/* Filter bar */}
-      <div className="flex justify-around gap-5 items-center">
+      <div className="flex items-center justify-around gap-5">
         {/* Sort by */}
-        <div className="flex justify-center bg-white rounded items-center h-7 border-2">
-          <p className="text-slate-400 px-3"> Sort by </p>
+        <div className="flex items-center justify-center bg-white border-2 rounded h-7">
+          <p className="px-3 text-slate-400"> Sort by </p>
           <select
             type="text"
             placeholder="Select"
-            className="rounded text-center"
+            className="text-center rounded"
           >
             <option value="">anything</option>
             <option value="daysleft">days left</option>
@@ -44,9 +45,9 @@ const FilterBar = ({ containsWord, handleContainsWord }) => {
           </select>
         </div>
         {/* Filter by company */}
-        <div className="flex justify-center bg-white rounded items-center h-7 border-2">
-          <p className="text-slate-400 px-3"> Filter by </p>
-          <select placeholder="Select" className="rounded w-28 text-center">
+        <div className="flex items-center justify-center bg-white border-2 rounded h-7">
+          <p className="px-3 text-slate-400"> Filter by </p>
+          <select placeholder="Select" className="text-center rounded w-28">
             <option value="">anything</option>
             {companies &&
               companies.map((company, index) => (

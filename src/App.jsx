@@ -8,10 +8,9 @@ import User from "./components/User";
 function App() {
   return (
     <div>
-      
       <Routes>
         <Route path="*" element={<Landing />} />
-        <Route path='/' element={<Landing />} />
+        <Route path="/" element={<Landing />} />
         <Route path="/home" element={<Home />} />
         <Route path="/user" element={<User />} />
         <Route path="/newproject" element={<AddProject />} />

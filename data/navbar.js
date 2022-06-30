@@ -1,22 +1,18 @@
 const navbar = [
   {
     src: "./assets/home.svg",
-    link: "",
+    link: "/home",
   },
   {
     src: "./assets/applications.svg",
-    link: "",
+    link: "/home",
   },
   {
     src: "./assets/editer.svg",
-    link: "",
+    link: "/newproject",
   },
   {
     src: "./assets/commenter.svg",
-    link: "",
-  },
-  {
-    src: "./assets/time.svg",
     link: "",
   },
   {

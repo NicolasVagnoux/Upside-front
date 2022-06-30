@@ -41,6 +41,13 @@ ProjectCard.propTypes = {
   nameProject: PropTypes.string.isRequired,
   projectDesc: PropTypes.string.isRequired,
   client: PropTypes.string.isRequired,
+  subsidiary: PropTypes.string.isRequired,
+  startDate: PropTypes.string.isRequired,
+  finalDate: PropTypes.string.isRequired,
+  progress: PropTypes.number.isRequired,
+  color: PropTypes.string.isRequired,
+  projectManager: PropTypes.string.isRequired,
+  industryTag: PropTypes.string.isRequired,
 };
 
 export default ProjectCard;

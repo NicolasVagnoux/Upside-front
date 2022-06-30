@@ -85,7 +85,7 @@ const AddProject = () => {
                 {/* Nom */}
                 <label htmlFor="name">Nom du projet :</label>
                 <input
-                  className="px-2 py-1 rounded-sm outline-none focus:outline-[#e79759] bg-slate-50 "
+                  className="px-2 py-1 rounded-sm outline-none focus:border-[#e79759] bg-slate-50 border-[1px] border-[#183650] "
                   type="text"
                   required
                   id="name"
@@ -100,7 +100,7 @@ const AddProject = () => {
                 {/* Client */}
                 <label htmlFor="client">Client :</label>
                 <input
-                  className="px-2 py-1 rounded-sm  outline-none focus:outline-[#e79759] bg-slate-50"
+                  className="px-2 py-1 rounded-sm  outline-none focus:border-[#e79759] bg-slate-50 border-[1px] border-[#183650]"
                   type="text"
                   required
                   id="client"
@@ -119,7 +119,7 @@ const AddProject = () => {
                 {/* Type */}
                 <label htmlFor="type">Type de projet :</label>
                 <input
-                  className="px-2 py-1 rounded-sm  outline-none focus:outline-[#e79759] bg-slate-50"
+                  className="px-2 py-1 rounded-sm  outline-none focus:border-[#e79759] bg-slate-50 border-[1px] border-[#183650]"
                   type="text"
                   required
                   id="type"
@@ -134,7 +134,7 @@ const AddProject = () => {
                 {/* Project Manager */}
                 <label htmlFor="projectmanager">Project Manager :</label>
                 <input
-                  className="px-2 py-1 rounded-sm  outline-none focus:outline-[#e79759] bg-slate-50"
+                  className="px-2 py-1 rounded-sm  outline-none focus:border-[#e79759] bg-slate-50 border-[1px] border-[#183650]"
                   type="text"
                   required
                   id="projectmanager"
@@ -153,7 +153,7 @@ const AddProject = () => {
                 {/* Filiale */}
                 <label htmlFor="subsidiary">Filiale :</label>
                 <input
-                  className="px-2 py-1 rounded-sm  outline-none focus:outline-[#e79759] bg-slate-50"
+                  className="px-2 py-1 rounded-sm  outline-none focus:border-[#e79759] bg-slate-50 border-[1px] border-[#183650]"
                   type="text"
                   required
                   id="subsidiary"
@@ -168,7 +168,7 @@ const AddProject = () => {
                 {/* Image */}
                 <label htmlFor="image">Image (url) :</label>
                 <input
-                  className="px-2 py-1 rounded-sm  outline-none focus:outline-[#e79759] bg-slate-50"
+                  className="px-2 py-1 rounded-sm  outline-none focus:border-[#e79759] bg-slate-50 border-[1px] border-[#183650]"
                   type="text"
                   required
                   id="image"
@@ -184,7 +184,7 @@ const AddProject = () => {
               {/* Description */}
               <label htmlFor="description">Description du projet :</label>
               <textarea
-                className="px-2 py-1 rounded-sm resize-none outline-none focus:outline-[#e79759] bg-slate-50"
+                className="px-2 py-1 rounded-sm resize-none outline-none focus:border-[#e79759] bg-slate-50 border-[1px] border-[#183650]"
                 rows="5"
                 required
                 id="description"
@@ -202,7 +202,7 @@ const AddProject = () => {
                 {/* DateDébut */}
                 <label htmlFor="startdate">Date de début (YYYY/MM/JJ) :</label>
                 <input
-                  className="px-2 py-1 rounded-sm  outline-none focus:outline-[#e79759] bg-slate-50"
+                  className="px-2 py-1 rounded-sm  outline-none focus:border-[#e79759] bg-slate-50 border-[1px] border-[#183650]"
                   type="text"
                   required
                   id="startdate"
@@ -217,7 +217,7 @@ const AddProject = () => {
                 {/* DateFin */}
                 <label htmlFor="enddate">Date de fin (YYYY/MM/JJ) :</label>
                 <input
-                  className="px-2 py-1 rounded-sm  outline-none focus:outline-[#e79759] bg-slate-50"
+                  className="px-2 py-1 rounded-sm  outline-none focus:border-[#e79759] bg-slate-50 border-[1px] border-[#183650]"
                   type="text"
                   required
                   id="enddate"

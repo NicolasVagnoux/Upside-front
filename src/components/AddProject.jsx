@@ -3,6 +3,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { toast, ToastContainer } from "react-toastify";
 import React, { useState } from "react";
 import ProjectCard from "./ProjectCard";
+import Navbar from "./Navbar";
 
 const AddProject = () => {
   const [name, setName] = useState("");
@@ -68,6 +69,7 @@ const AddProject = () => {
 
   return (
     <>
+      <Navbar />
       <div className="pl-[80px] h-[100vh] flex flex-col justify-start items-start">
         <h1 className="my-8 ml-12 text-5xl font-bigtitle text-[#e79759]">
           Ajouter un nouveau projet :

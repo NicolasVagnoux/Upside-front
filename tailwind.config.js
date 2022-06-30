@@ -12,6 +12,7 @@ module.exports = {
       fontFamily: {
         text: "'Helvetica'",
         title: "'Lato', 'sans-serif'",
+        bigtitle: "'Corben', cursive;",
       },
     },
   },

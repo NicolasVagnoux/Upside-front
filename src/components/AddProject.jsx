@@ -69,11 +69,13 @@ const AddProject = () => {
   return (
     <>
       <div className="pl-[80px] h-[100vh] flex flex-col justify-start items-start">
-        <h1 className="my-8 ml-12 text-5xl">Ajouter un nouveau projet :</h1>
+        <h1 className="my-8 ml-12 text-5xl font-bigtitle text-[#e79759]">
+          Ajouter un nouveau projet :
+        </h1>
         <div className="flex items-center justify-start">
           <form
             onSubmit={createProject}
-            className="ml-12 w-[750px] h-[540px] mt-8 rounded-3xl box-shadow flex flex-col justify-around items-center"
+            className="ml-12 w-[750px] h-[540px] mt-8 rounded-lg shadow-2xl flex font-text flex-col justify-around items-center"
           >
             <div className="flex w-[90%] justify-between">
               {" "}
@@ -83,7 +85,7 @@ const AddProject = () => {
                 {/* Nom */}
                 <label htmlFor="name">Nom du projet :</label>
                 <input
-                  className="px-2 py-1 rounded-sm box-shadow"
+                  className="px-2 py-1 rounded-sm outline-none focus:outline-[#e79759] bg-slate-50 "
                   type="text"
                   required
                   id="name"
@@ -98,7 +100,7 @@ const AddProject = () => {
                 {/* Client */}
                 <label htmlFor="client">Client :</label>
                 <input
-                  className="px-2 py-1 rounded-sm box-shadow"
+                  className="px-2 py-1 rounded-sm  outline-none focus:outline-[#e79759] bg-slate-50"
                   type="text"
                   required
                   id="client"
@@ -117,7 +119,7 @@ const AddProject = () => {
                 {/* Type */}
                 <label htmlFor="type">Type de projet :</label>
                 <input
-                  className="px-2 py-1 rounded-sm box-shadow"
+                  className="px-2 py-1 rounded-sm  outline-none focus:outline-[#e79759] bg-slate-50"
                   type="text"
                   required
                   id="type"
@@ -132,7 +134,7 @@ const AddProject = () => {
                 {/* Project Manager */}
                 <label htmlFor="projectmanager">Project Manager :</label>
                 <input
-                  className="px-2 py-1 rounded-sm box-shadow"
+                  className="px-2 py-1 rounded-sm  outline-none focus:outline-[#e79759] bg-slate-50"
                   type="text"
                   required
                   id="projectmanager"
@@ -151,7 +153,7 @@ const AddProject = () => {
                 {/* Filiale */}
                 <label htmlFor="subsidiary">Filiale :</label>
                 <input
-                  className="px-2 py-1 rounded-sm box-shadow"
+                  className="px-2 py-1 rounded-sm  outline-none focus:outline-[#e79759] bg-slate-50"
                   type="text"
                   required
                   id="subsidiary"
@@ -166,7 +168,7 @@ const AddProject = () => {
                 {/* Image */}
                 <label htmlFor="image">Image (url) :</label>
                 <input
-                  className="px-2 py-1 rounded-sm box-shadow"
+                  className="px-2 py-1 rounded-sm  outline-none focus:outline-[#e79759] bg-slate-50"
                   type="text"
                   required
                   id="image"
@@ -182,7 +184,7 @@ const AddProject = () => {
               {/* Description */}
               <label htmlFor="description">Description du projet :</label>
               <textarea
-                className="px-2 py-1 rounded-sm box-shadow"
+                className="px-2 py-1 rounded-sm resize-none outline-none focus:outline-[#e79759] bg-slate-50"
                 rows="5"
                 required
                 id="description"
@@ -200,7 +202,7 @@ const AddProject = () => {
                 {/* DateDébut */}
                 <label htmlFor="startdate">Date de début (YYYY/MM/JJ) :</label>
                 <input
-                  className="px-2 py-1 rounded-sm box-shadow"
+                  className="px-2 py-1 rounded-sm  outline-none focus:outline-[#e79759] bg-slate-50"
                   type="text"
                   required
                   id="startdate"
@@ -215,7 +217,7 @@ const AddProject = () => {
                 {/* DateFin */}
                 <label htmlFor="enddate">Date de fin (YYYY/MM/JJ) :</label>
                 <input
-                  className="px-2 py-1 rounded-sm box-shadow"
+                  className="px-2 py-1 rounded-sm  outline-none focus:outline-[#e79759] bg-slate-50"
                   type="text"
                   required
                   id="enddate"
@@ -227,7 +229,7 @@ const AddProject = () => {
               </div>
             </div>
             <input
-              className="self-end px-6 py-1 mr-20 border-[1px] border-black rounded-xl cursor-pointer"
+              className="self-end px-6 py-1 mr-20 border-[1px] border-[#e79759] hover:bg-[#e79759] hover:text-white rounded-xl cursor-pointer"
               type="submit"
               value="Créer le projet"
             />

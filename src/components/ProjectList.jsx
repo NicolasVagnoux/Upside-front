@@ -15,7 +15,7 @@ const ProjectList = () => {
   console.log(projectList);
 
   return (
-    <div>
+    <div className="flex flex-wrap gap-4">
       {projectList &&
         projectList.map((project, index) => (
           <ProjectCard key={index} {...project} />

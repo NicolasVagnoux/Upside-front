@@ -3,7 +3,7 @@ import ProjectList from "./ProjectList";
 
 const Home = () => {
   return (
-    <div>
+    <div className="pl-[120px]">
       <ProjectList />
     </div>
   );

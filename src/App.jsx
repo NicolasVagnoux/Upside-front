@@ -2,15 +2,15 @@ import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import AddProject from "./components/AddProject";
 import Home from "./components/Home";
-import Navbar from "./components/Navbar";
+import Landing from "./components/Landing";
 import User from "./components/User";
 
 function App() {
   return (
     <div>
-      <Navbar />
       <Routes>
-        <Route path="*" element={<Home />} />
+        <Route path="*" element={<Landing />} />
+        <Route path="/" element={<Landing />} />
         <Route path="/home" element={<Home />} />
         <Route path="/user" element={<User />} />
         <Route path="/newproject" element={<AddProject />} />

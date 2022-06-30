@@ -1,4 +1,5 @@
 import React from "react";
+import Navbar from "./Navbar";
 import ProjectList from "./ProjectList";
 import FilterBar from "./FilterBar";
 import { useState } from "react";
@@ -21,6 +22,7 @@ const Home = () => {
       />
       <div className="pl-[120px]">
         <ProjectList containsWord={containsWord} />
+
       </div>
     </>
   );

@@ -36,6 +36,7 @@ const ProjectCard = ({
   };
 
   return (
+
     <div className="bg-white w-[300px] h-[350px] rounded-lg flex flex-col justify-around items-start shadow-lg px-6 py-6 relative">
       <button
         onClick={() => {

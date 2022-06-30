@@ -14,8 +14,21 @@ const ProjectCard = ({
   finalDate,
   progress,
 }) => {
+  const daysLeft = () => {
+    const date =
+      (new Date(finalDate).getTime() - new Date(startDate).getTime()) /
+      (1000 * 3600 * 24);
+    return Math.round(date);
+  };
+
   return (
-    <div className="bg-white w-[300px] h-[350px] rounded-lg flex flex-col justify-around items-start shadow-2xl px-6 py-6">
+    <div className="bg-white w-[300px] h-[350px] rounded-lg flex flex-col justify-around items-start shadow-lg px-6 py-6 relative">
+      <img
+        src="../../icons/close.png"
+        width={16}
+        alt="icon"
+        className="absolute top-3 right-3"
+      />
       <div className="w-20 h-20">
         <img src={image} alt="company logo" />
       </div>
@@ -39,16 +52,12 @@ const ProjectCard = ({
         <p className="text-xs text-slate-400">{progress}%</p>
       </div>
       <div className="flex justify-between w-full">
-        <p className="flex gap-1 px-2 py-0.5 rounded-md bg-gray-400/25 text-slate-500">
-          <img src="../../icons/time.png" width={24} alt="icon" />
-          {Math.abs(
-            new Date(finalDate).getTime() - new Date(startDate).getTime()
-          ) /
-            (1000 * 3600 * 24)}{" "}
-          days left
+        <p className="flex gap-1 px-2 py-0.5 rounded-md bg-gray-400/25 text-slate-500 text-xs items-center">
+          <img src="../../icons/time.png" alt="icon" className="w-5" />
+          {daysLeft()} days left
         </p>
-        <p className="flex items-center">
-          <img src="../../icons/pin.png" width={24} alt="icon" />
+        <p className="flex items-center text-xs">
+          <img src="../../icons/pin.png" alt="icon" className="w-5" />
           {subsidiary}
         </p>
       </div>

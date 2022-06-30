@@ -32,7 +32,7 @@ const navbar = [
   {
     id: 7,
     src: "./assets/settings.svg",
-    link: "",
+    link: "/settings",
   },
 ];
 

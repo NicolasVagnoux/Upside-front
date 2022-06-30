@@ -1,9 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import Typography from "@mui/material/Typography";
+
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import ProjectDesc from "./ProjectDesc";
+
 import PropTypes from "prop-types";
 import axios from "axios";
 import ProgressBar from "./ProgressBar";
 
-const ProjectCard = ({
+// ----- Color theme provider -----
+
+// ----------------------------------------------
+
+const ClientCard = (
   id,
   client,
   nameProject,
@@ -14,8 +25,8 @@ const ProjectCard = ({
   subsidiary,
   startDate,
   finalDate,
-  progress,
-}) => {
+  progress
+) => {
   const daysLeft = () => {
     const date =
       (new Date(finalDate).getTime() - new Date(startDate).getTime()) /
@@ -105,7 +116,7 @@ const ProjectCard = ({
   );
 };
 
-ProjectCard.propTypes = {
+ClientCard.propTypes = {
   id: PropTypes.number.isRequired,
   client: PropTypes.string.isRequired,
   industryTag: PropTypes.string.isRequired,
@@ -119,4 +130,4 @@ ProjectCard.propTypes = {
   progress: PropTypes.number.isRequired,
 };
 
-export default ProjectCard;
+export default ClientCard;

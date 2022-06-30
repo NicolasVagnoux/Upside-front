@@ -5,9 +5,9 @@ import navbar from "../../data/navbar";
 const Navbar = () => {
   return (
     // Navbar complète
-    <div className="fixed py-4 h-full w-[80px] bg-[#0068FF] flex flex-col justify-between items-center">
+    <div className="fixed py-4 h-full w-[80px] bg-[#183650] flex flex-col justify-between items-center">
       <img
-        className="w-[50px] logo-shadow"
+        className="w-[50px] shadow-2xl"
         src="./assets/upside.png"
         alt="upside"
       />
@@ -20,11 +20,13 @@ const Navbar = () => {
             </Link>
           ))}
       </ul>
-      <img
-        className="w-[30px] logo-shadow cursor-pointer"
-        src="./assets/logout.svg"
-        alt="logout"
-      />
+      <Link to="/">
+        <img
+          className="w-[30px] shadow-2xl cursor-pointer"
+          src="./assets/logout.svg"
+          alt="logout"
+        />
+      </Link>
     </div>
   );
 };

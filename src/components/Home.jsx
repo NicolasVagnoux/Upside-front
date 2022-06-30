@@ -1,8 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "./Navbar";
 import ProjectList from "./ProjectList";
 import FilterBar from "./FilterBar";
-import { useState } from "react";
 
 const Home = () => {
   // je créé une variable pour mes inputs de search
@@ -16,13 +15,13 @@ const Home = () => {
 
   return (
     <>
+      <Navbar />
       <FilterBar
         handleContainsWord={handleContainsWord}
         containsWord={containsWord}
       />
       <div className="pl-[120px]">
         <ProjectList containsWord={containsWord} />
-
       </div>
     </>
   );

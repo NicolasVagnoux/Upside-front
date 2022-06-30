@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const ProgressBar = (props) => {
   const { bgcolor, completed } = props;
@@ -18,18 +19,16 @@ const ProgressBar = (props) => {
     textAlign: "right",
   };
 
-  const labelStyles = {
-    padding: 5,
-    color: "blue",
-    fontWeight: "bold",
-    textAlign: "center",
-  };
-
   return (
     <div style={containerStyles}>
-      <div style={fillerStyles}></div>
+      <div style={fillerStyles} />
     </div>
   );
+};
+
+ProgressBar.propTypes = {
+  bgcolor: PropTypes.string.isRequired,
+  completed: PropTypes.number.isRequired,
 };
 
 export default ProgressBar;

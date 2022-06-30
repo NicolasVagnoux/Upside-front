@@ -7,9 +7,6 @@ import User from "./components/User";
 function App() {
   return (
     <div>
-
-      <Home />
-      {/* <User /> */}
       <Navbar />
       <Routes>
         <Route path="*" element={<Home />} />

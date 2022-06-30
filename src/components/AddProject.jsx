@@ -54,20 +54,22 @@ const AddProject = () => {
 
   return (
     <div className="pl-[80px] h-[100vh] flex flex-col justify-start items-start">
-      <h1 className="my-8 ml-12 text-5xl">Ajouter un nouveau projet :</h1>
+      <h1 className="my-8 ml-12 text-5xl font-bigtitle text-[#e79759]">
+        Ajouter un nouveau projet :
+      </h1>
       <form
         onSubmit={createProject}
-        className="ml-12 w-[750px] h-[540px] mt-8 rounded-3xl box-shadow flex flex-col justify-around items-center"
+        className="ml-12 w-[750px] h-[540px] mt-8 rounded-lg shadow-2xl flex flex-col justify-around items-center tex-[#183650]"
       >
         <div className="flex w-[90%] justify-between">
           {" "}
           {/* Nom + Client */}
-          <div className="flex flex-col w-[45%]">
+          <div className="flex flex-col w-[45%] font-title">
             {" "}
             {/* Nom */}
             <label htmlFor="name">Nom du projet :</label>
             <input
-              className="px-2 py-1 rounded-sm box-shadow"
+              className="px-2 py-1 rounded-sm outline-none focus:outline-[#e79759] bg-slate-50 "
               type="text"
               required
               id="name"
@@ -77,12 +79,12 @@ const AddProject = () => {
               }}
             />
           </div>
-          <div className="flex flex-col w-[45%]">
+          <div className="flex flex-col w-[45%] font-title">
             {" "}
             {/* Client */}
             <label htmlFor="client">Client :</label>
             <input
-              className="px-2 py-1 rounded-sm box-shadow"
+              className="px-2 py-1 rounded-sm outline-none focus:outline-[#e79759]  bg-slate-50"
               type="text"
               required
               id="client"
@@ -96,12 +98,12 @@ const AddProject = () => {
         <div className="flex w-[90%] justify-between">
           {" "}
           {/* Type + Project Manager */}
-          <div className="flex flex-col w-[45%]">
+          <div className="flex flex-col w-[45%] font-title">
             {" "}
             {/* Type */}
             <label htmlFor="type">Type de projet :</label>
             <input
-              className="px-2 py-1 rounded-sm box-shadow"
+              className="px-2 py-1 outline-none focus:outline-[#e79759] rounded-sm bg-slate-50"
               type="text"
               required
               id="type"
@@ -111,12 +113,12 @@ const AddProject = () => {
               }}
             />
           </div>
-          <div className="flex flex-col w-[45%]">
+          <div className="flex flex-col w-[45%] font-title">
             {" "}
             {/* Project Manager */}
             <label htmlFor="projectmanager">Project Manager :</label>
             <input
-              className="px-2 py-1 rounded-sm box-shadow"
+              className="px-2 py-1 rounded-sm outline-none focus:outline-[#e79759] bg-slate-50"
               type="text"
               required
               id="projectmanager"
@@ -127,15 +129,15 @@ const AddProject = () => {
             />
           </div>
         </div>
-        <div className="flex w-[90%] justify-between">
+        <div className="flex w-[90%] justify-between font-title">
           {" "}
           {/* Filiale + Image */}
-          <div className="flex flex-col w-[45%]">
+          <div className="flex flex-col w-[45%] font-title">
             {" "}
             {/* Filiale */}
             <label htmlFor="subsidiary">Filiale :</label>
             <input
-              className="px-2 py-1 rounded-sm box-shadow"
+              className="px-2 py-1 rounded-sm outline-none focus:outline-[#e79759] bg-slate-50"
               type="text"
               required
               id="subsidiary"
@@ -145,12 +147,12 @@ const AddProject = () => {
               }}
             />
           </div>
-          <div className="flex flex-col w-[45%]">
+          <div className="flex flex-col w-[45%] font-title">
             {" "}
             {/* Image */}
             <label htmlFor="image">Image (url) :</label>
             <input
-              className="px-2 py-1 rounded-sm box-shadow"
+              className="px-2 py-1 rounded-sm outline-none focus:outline-[#e79759] bg-slate-50"
               type="text"
               required
               id="image"
@@ -161,12 +163,12 @@ const AddProject = () => {
             />
           </div>
         </div>
-        <div className="flex flex-col w-[90%]">
+        <div className="flex flex-col w-[90%] font-title">
           {" "}
           {/* Description */}
           <label htmlFor="description">Description du projet :</label>
           <textarea
-            className="px-2 py-1 rounded-sm box-shadow"
+            className="px-2 py-1 rounded-sm resize-none outline-none focus:outline-[#e79759] bg-slate-50"
             rows="5"
             required
             id="description"
@@ -179,12 +181,12 @@ const AddProject = () => {
         <div className="flex w-[90%] justify-between">
           {" "}
           {/* DateDébut + DateFin */}
-          <div className="flex flex-col w-[45%]">
+          <div className="flex flex-col w-[45%] font-title">
             {" "}
             {/* DateDébut */}
             <label htmlFor="startdate">Date de début (YYYY/MM/JJ) :</label>
             <input
-              className="px-2 py-1 rounded-sm box-shadow"
+              className="px-2 py-1 rounded-sm outline-none focus:outline-[#e79759] bg-slate-50"
               type="text"
               required
               id="startdate"
@@ -194,12 +196,12 @@ const AddProject = () => {
               }}
             />
           </div>
-          <div className="flex flex-col w-[45%]">
+          <div className="flex flex-col w-[45%] font-title">
             {" "}
             {/* DateFin */}
             <label htmlFor="enddate">Date de fin (YYYY/MM/JJ) :</label>
             <input
-              className="px-2 py-1 rounded-sm box-shadow"
+              className="px-2 py-1 rounded-sm outline-none focus:outline-[#e79759] bg-slate-50 "
               type="text"
               required
               id="enddate"
@@ -211,7 +213,7 @@ const AddProject = () => {
           </div>
         </div>
         <input
-          className="self-end px-6 py-1 mr-20 border-[1px] border-black rounded-xl cursor-pointer"
+          className="self-end px-6 py-1 mr-20 border-[1px] border-[#e79759] hover:bg-[#e79759] hover:text-white rounded-xl cursor-pointer font-title"
           type="submit"
           value="Créer le projet"
         />

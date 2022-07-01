@@ -36,31 +36,31 @@ const ClientCard = () => {
             onClick={handleOpen}
           >
             <CardContent>
-              <Typography
+              <h2
                 sx={{ fontSize: 20 }}
                 color="text.secondary"
-                className="pb-3"
+                className="font-bold pb-3"
               >
                 Evolution 4
-              </Typography>
+              </h2>
 
-              <Stack direction="row" spacing={2}>
+              <div className="flex justify-between item-center mb-3">
                 <Avatar
                   alt="Remy Sharp"
                   src="https://mui.com/static/images/avatar/2.jpg"
                 />
 
-                <Typography sx={{ fontSize: 12 }} className="pb-3">
+                <p className="text-xs mt-2">
                   Project Manager : Ghislain Lescuyer
-                </Typography>
-              </Stack>
+                </p>
+              </div>
 
               <Typography
                 sx={{ mb: 0.5 }}
                 color="text.secondary"
                 className="pb-3"
               >
-                Fin du projet le 30/09/2022
+                Fin du projet dans <span className="font-bold"> 90 jours</span>
               </Typography>
               <Typography
                 sx={{ mb: 0.5 }}
@@ -68,13 +68,6 @@ const ClientCard = () => {
                 className="pb-3"
               >
                 Avancement ↔️ 60%
-              </Typography>
-              <Typography
-                sx={{ mb: 0.5 }}
-                color="text.secondary"
-                className="pb-2"
-              >
-                Fin du projet dans : 90 jours
               </Typography>
             </CardContent>
           </Card>

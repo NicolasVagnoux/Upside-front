@@ -17,44 +17,42 @@ const theme = createTheme({
 
 const ContactCard = () => {
   return (
-    <div className="flex flex-wrap items-center m-10">
-      <div>
-        <ThemeProvider theme={theme}>
-          <Card color="paper" className=" w-72 h-52 cursor-pointer">
-            <CardContent>
-              <Typography
-                sx={{ fontSize: 20 }}
-                color="text.secondary"
-                className="pb-4"
-              >
-                APSIDE CONTACT
+    <div className="flex flex-wrap w-full justify-center items-center">
+      <ThemeProvider theme={theme}>
+        <Card color="paper" className=" w-72 h-52 cursor-pointer">
+          <CardContent>
+            <Typography
+              sx={{ fontSize: 20 }}
+              color="text.secondary"
+              className="pb-4"
+            >
+              CONTACT APSIDE
+            </Typography>
+
+            <Typography
+              sx={{ mb: 0.5 }}
+              color="text.secondary"
+              className="pb-4"
+            >
+              Client Manager
+            </Typography>
+
+            <div className="flex">
+              <Stack direction="row" spacing={2}>
+                <Avatar
+                  alt="Client manager"
+                  src="https://resize.elle.fr/article/var/plain_site/storage/images/loisirs/cinema/news/avatar-2-une-premiere-bande-annonce-en-mai-4010741/96462268-1-fre-FR/Avatar-2-une-premiere-bande-annonce-en-mai.jpg"
+                />
+                <Typography sx={{ fontSize: 12 }}>Nicolas Vagnoux</Typography>
+              </Stack>
+
+              <Typography sx={{ fontSize: 12 }} className="pt-2">
+                Avatar@apside.com
               </Typography>
-
-              <Typography
-                sx={{ mb: 0.5 }}
-                color="text.secondary"
-                className="pb-4"
-              >
-                Client Manager
-              </Typography>
-
-              <div className="flex">
-                <Stack direction="row" spacing={2}>
-                  <Avatar
-                    alt="Client manager"
-                    src="https://resize.elle.fr/article/var/plain_site/storage/images/loisirs/cinema/news/avatar-2-une-premiere-bande-annonce-en-mai-4010741/96462268-1-fre-FR/Avatar-2-une-premiere-bande-annonce-en-mai.jpg"
-                  />
-                  <Typography sx={{ fontSize: 12 }}>Nicolas Vagnoux</Typography>
-                </Stack>
-
-                <Typography sx={{ fontSize: 12 }} className="pt-2">
-                  Avatar@apside.com
-                </Typography>
-              </div>
-            </CardContent>
-          </Card>
-        </ThemeProvider>
-      </div>
+            </div>
+          </CardContent>
+        </Card>
+      </ThemeProvider>
     </div>
   );
 };

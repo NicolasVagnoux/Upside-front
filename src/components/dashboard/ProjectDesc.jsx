@@ -38,14 +38,25 @@ const ProjectDesc = ({ open, handleClose }) => {
             animationOut="fadeInDown"
             isVisible
           >
-            <Typography
+            <h2
               id="modal-modal-title"
-              variant="h4"
-              component="h2"
-              className="bp1:px-24 text-center"
+              className="text-center text-xl font-extrabold pb-7"
             >
-              BIENVENUE SUR LA MODALE
-            </Typography>
+              - Evolution 4 -
+            </h2>
+            <h4 className="text-xl font-bold pb-3">Description</h4>
+            <p className="pb-3">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
+              accusantium, officia enim laudantium, ullam voluptate et odit
+              temporibus sit voluptas quod. Iusto eos debitis voluptate adipisci
+              ipsa ad ex commodi.
+            </p>
+            <h6 className="text-lg font-bold pb-3">Objectifs</h6>
+            <ol>
+              <li>➡️ Objectif 1</li>
+              <li>➡️ Objectif 2</li>
+              <li>➡️ Objectif 3</li>
+            </ol>
           </Animated>
         </Box>
       </Modal>

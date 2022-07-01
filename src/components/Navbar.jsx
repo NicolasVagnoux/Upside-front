@@ -5,7 +5,7 @@ import navbar from "../../data/navbar";
 const Navbar = () => {
   return (
     // Navbar complète
-    <div className="fixed py-4 h-full w-[80px] bg-[#183650] flex flex-col justify-between items-center">
+    <div className="fixed py-4 left-0 h-full w-[80px] bg-[#183650] flex flex-col justify-between items-center">
       <img
         className="w-[50px] shadow-2xl"
         src="./assets/upside.png"

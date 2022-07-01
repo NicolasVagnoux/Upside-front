@@ -2,20 +2,27 @@ import React from "react";
 import Articles from "./Articles";
 import ContactCard from "./ContactCard";
 import ClientCard from "./ClientCard";
-import StateView from "./StateView";
 import Welcome from "./Welcome";
+import Fade from "react-reveal/Fade";
+import Navbar from "../Navbar";
 
 const DashboardHome = () => {
   return (
-    <div className="flex pl-20 flex-wrap justify-between">
+    <div className="flex pl-20 flex-wrap justify-between overflow-hidden">
+      <Navbar />
       <Welcome />
-      <ClientCard />
-      <ClientCard />
-      <ClientCard />
-      <ClientCard />
-      <StateView />
-      <ContactCard />
-      <Articles />
+      <Fade big className="w-full">
+        <div className="w-full">
+          <ContactCard />
+        </div>
+        <ClientCard />
+        <ClientCard />
+        <ClientCard />
+        <ClientCard />
+        <ClientCard />
+        <ClientCard />
+        <Articles />
+      </Fade>
     </div>
   );
 };

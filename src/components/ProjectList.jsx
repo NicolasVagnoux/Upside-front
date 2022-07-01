@@ -17,7 +17,7 @@ const ProjectList = ({ containsWord }) => {
   return (
     <div className="flex flex-wrap gap-4 pt-16">
       {projectList &&
-        projectList
+        projectList  
           .filter(
             (element) =>
               element.nameProject

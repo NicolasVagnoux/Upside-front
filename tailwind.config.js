@@ -41,8 +41,6 @@ module.exports = {
         topSlideIn: "topSlideIn 1.5s linear",
         rightSlideIn: "rightSlideIn 2s linear",
         opacity: "opacity 2s linear",
-      },
-      animation: {
         text: "text 5s ease infinite",
       },
     },

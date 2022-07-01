@@ -12,7 +12,6 @@ const ProjectCard = ({
   industryTag,
   projectManager,
   subsidiary,
-  startDate,
   finalDate,
   progress,
 }) => {
@@ -65,7 +64,7 @@ const ProjectCard = ({
       {/* <p>{startDate.slice(0, 10).split("-").reverse().join("/")}</p>
       <p>{finalDate.slice(0, 10).split("-").reverse().join("/")}</p> */}
       <div className="flex flex-col-reverse items-center justify-around">
-        {/* si la progression affiche plus de 50%, affiche-moi une barre de progression qui sera verte, sinon elle sera rouge*/}
+        {/* si la progression affiche plus de 50%, affiche-moi une barre de progression qui sera verte, sinon elle sera rouge */}
         {progress > 50 ? (
           <ProgressBar bgcolor="green" completed={progress} />
         ) : (
@@ -134,7 +133,6 @@ ProjectCard.propTypes = {
   image: PropTypes.string.isRequired,
   projectDesc: PropTypes.string.isRequired,
   subsidiary: PropTypes.string.isRequired,
-  startDate: PropTypes.string.isRequired,
   finalDate: PropTypes.string.isRequired,
   progress: PropTypes.number.isRequired,
 };

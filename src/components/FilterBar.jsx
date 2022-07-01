@@ -12,7 +12,6 @@ const FilterBar = ({
     "Orange",
     "Pellenc",
     "Ariane group",
-    "Saft",
     "Hololens",
     "Wild Code Scool",
     "SNCF",

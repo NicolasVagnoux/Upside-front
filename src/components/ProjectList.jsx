@@ -44,13 +44,13 @@ const ProjectList = ({ containsWord, company, sorted }) => {
           })
           .sort(function (a, b) {
             return (
-              sorted == "daysleftup" &&
+              sorted === "daysleftup" &&
               new Date(a.finalDate).getTime() - new Date(b.finalDate).getTime()
             );
           })
           .sort(function (a, b) {
             return (
-              sorted == "daysleftdown" &&
+              sorted === "daysleftdown" &&
               new Date(b.finalDate).getTime() - new Date(a.finalDate).getTime()
             );
           })

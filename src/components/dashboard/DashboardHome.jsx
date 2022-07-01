@@ -1,9 +1,9 @@
 import React from "react";
+import Fade from "react-reveal/Fade";
 import Articles from "./Articles";
 import ContactCard from "./ContactCard";
 import ClientCard from "./ClientCard";
 import Welcome from "./Welcome";
-import Fade from "react-reveal/Fade";
 import Navbar from "../Navbar";
 import ClientNav from "./ClientNav";
 

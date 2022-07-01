@@ -26,7 +26,7 @@ const ClientNav = () => {
               src="https://cdn-icons-png.flaticon.com/512/145/145843.png"
             />
           </li>
-          <li></li>
+          <li />
         </ul>
       </nav>
     </div>

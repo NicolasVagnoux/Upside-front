@@ -40,7 +40,7 @@ const ContactCard = () => {
               Client Manager
             </Typography>
 
-            <div className="flex justify-start items-center"></div>
+            <div className="flex justify-start items-center" />
             <div className="m-auto mt-3">
               <p>estelle@apside.com</p>
               <p>06.77.78.77.78</p>

@@ -15,7 +15,7 @@ const Welcome = () => {
             from-blue-900 via-blue-400 to-blue-100
             animate-text"
         >
-          Hi, welcome back
+          Bonjour Nicolas,
         </Typography>
       </div>
     </div>

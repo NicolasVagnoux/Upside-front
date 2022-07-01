@@ -12,13 +12,12 @@ const ProjectCard = ({
   industryTag,
   projectManager,
   subsidiary,
-  startDate,
   finalDate,
   progress,
 }) => {
   const daysLeft = () => {
     const date =
-      (new Date(finalDate).getTime() - new Date(startDate).getTime()) /
+      (new Date(finalDate).getTime() - new Date().getTime()) /
       (1000 * 3600 * 24);
     return Math.round(date);
   };
@@ -36,7 +35,7 @@ const ProjectCard = ({
   };
 
   return (
-    <div className="bg-white w-[300px] h-[350px] rounded-lg flex flex-col justify-around items-start shadow-lg px-6 py-6 relative">
+    <div className="bg-white w-[300px] h-[350px] rounded-lg flex flex-col justify-between items-start shadow-lg px-6 py-6 relative">
       <button
         onClick={() => {
           setDeleteModal(true);
@@ -53,7 +52,7 @@ const ProjectCard = ({
         {nameProject}
       </h1>
       <h2 className="leading-none">{client}</h2>
-      <p className="overflow-hidden text-xs h-1/6 text-slate-400">
+      <p className="overflow-hidden text-ellipsis	text-xs h-1/6 text-slate-400">
         {projectDesc}{" "}
       </p>
       <p className="overflow-hidden text-xs leading-none text-slate-400">
@@ -62,15 +61,32 @@ const ProjectCard = ({
       <p className="overflow-hidden text-xs text-slate-400">
         Contact: {projectManager}
       </p>
-      {/* <p>{startDate.slice(0, 10).split("-").reverse().join("/")}</p>
-      <p>{finalDate.slice(0, 10).split("-").reverse().join("/")}</p> */}
-      <div className="flex flex-col-reverse items-center justify-around">
-        <ProgressBar bgcolor="red" completed={progress} />
+      <div className="flex flex-col-reverse items-center justify-around my-2">
+        {progress > 50 ? (
+          <ProgressBar bgcolor="green" completed={progress} />
+        ) : (
+          <ProgressBar bgcolor="red" completed={progress} />
+        )}
+
         <p className="text-xs text-slate-400">{progress}%</p>
       </div>
-      <div className="flex justify-between w-full">
-        <p className="flex gap-1 px-2 py-0.5 rounded-md bg-gray-400/25 text-slate-500 text-xs items-center">
-          <img src="../../icons/time.png" alt="icon" className="w-5" />
+      <div className="flex justify-between w-full pt-3">
+        <p
+          className={
+            daysLeft() < 100
+              ? `flex gap-1 px-2 py-0.5 rounded-md bg-red-300/40 text-red-800 text-xs items-center`
+              : `flex gap-1 px-2 py-0.5 rounded-md bg-gray-400/25 text-slate-500 text-xs items-center`
+          }
+        >
+          <img
+            src={
+              daysLeft() < 100
+                ? "../../icons/warning.png"
+                : "../../icons/time.png"
+            }
+            alt="icon"
+            className="w-4"
+          />
           {daysLeft()} days left
         </p>
         <p className="flex items-center text-xs">
@@ -114,7 +130,6 @@ ProjectCard.propTypes = {
   image: PropTypes.string.isRequired,
   projectDesc: PropTypes.string.isRequired,
   subsidiary: PropTypes.string.isRequired,
-  startDate: PropTypes.string.isRequired,
   finalDate: PropTypes.string.isRequired,
   progress: PropTypes.number.isRequired,
 };

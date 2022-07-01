@@ -35,7 +35,7 @@ const ProjectCard = ({
   };
 
   return (
-    <div className="bg-white w-[300px] h-[350px] rounded-lg flex flex-col justify-around items-start shadow-lg px-6 py-6 relative">
+    <div className="bg-white w-[300px] h-[350px] rounded-lg flex flex-col justify-between items-start shadow-lg px-6 py-6 relative">
       <button
         onClick={() => {
           setDeleteModal(true);
@@ -52,7 +52,7 @@ const ProjectCard = ({
         {nameProject}
       </h1>
       <h2 className="leading-none">{client}</h2>
-      <p className="overflow-hidden text-xs h-1/6 text-slate-400">
+      <p className="overflow-hidden text-ellipsis	text-xs h-1/6 text-slate-400">
         {projectDesc}{" "}
       </p>
       <p className="overflow-hidden text-xs leading-none text-slate-400">
@@ -61,10 +61,7 @@ const ProjectCard = ({
       <p className="overflow-hidden text-xs text-slate-400">
         Contact: {projectManager}
       </p>
-      {/* <p>{startDate.slice(0, 10).split("-").reverse().join("/")}</p>
-      <p>{finalDate.slice(0, 10).split("-").reverse().join("/")}</p> */}
-      <div className="flex flex-col-reverse items-center justify-around">
-        {/* si la progression affiche plus de 50%, affiche-moi une barre de progression qui sera verte, sinon elle sera rouge */}
+      <div className="flex flex-col-reverse items-center justify-around my-2">
         {progress > 50 ? (
           <ProgressBar bgcolor="green" completed={progress} />
         ) : (
@@ -73,7 +70,7 @@ const ProjectCard = ({
 
         <p className="text-xs text-slate-400">{progress}%</p>
       </div>
-      <div className="flex justify-between w-full">
+      <div className="flex justify-between w-full pt-3">
         <p
           className={
             daysLeft() < 100

@@ -17,7 +17,6 @@ const FilterBar = ({
     "SNCF",
     "EDF",
     "Quality Assurances",
-    "Saft",
     "Verkor",
   ];
 

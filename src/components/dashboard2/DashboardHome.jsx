@@ -8,7 +8,7 @@ import ClientProjectList from "./ClientProjectList";
 
 const DashboardHome = () => {
   return (
-    <div className="flex pl-20 flex-wrap justify-between overflow-hidden">
+    <div className="flex flex-wrap justify-between pl-20 overflow-hidden">
       <Navbar />
       <ClientNav />
       <Welcome />
@@ -17,9 +17,9 @@ const DashboardHome = () => {
       </div>
       <div className="w-full">
         <ContactCard />
-        <p className="font-title text-3xl text-slate-800 pl-10 pt-16">
+        <p className="pt-16 pl-10 text-3xl font-title text-slate-800">
           {" "}
-          What's up in your industry ?
+          Quoi de neuf dans votre secteur ?
         </p>
         <Articles className="bp1:hidden" />
       </div>

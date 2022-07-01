@@ -4,7 +4,7 @@ import AddProject from "./components/AddProject";
 import Home from "./components/Home";
 import Landing from "./components/Landing";
 import User from "./components/User";
-import DashboardHome from "./components/dashboard/DashboardHome";
+import DashboardHome from "./components/dashboard2/DashboardHome";
 import Settings from "./components/Settings";
 
 function App() {

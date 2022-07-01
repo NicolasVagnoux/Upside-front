@@ -5,7 +5,6 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import Avatar from "@mui/material/Avatar";
-import Stack from "@mui/material/Stack";
 
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import ProjectDesc from "./ProjectDesc";

@@ -17,6 +17,10 @@ const DashboardHome = () => {
       </div>
       <div className="w-full">
         <ContactCard />
+        <p className="font-title text-3xl text-slate-800 pl-10 pt-16">
+          {" "}
+          What's up in your industry ?
+        </p>
         <Articles className="bp1:hidden" />
       </div>
     </div>

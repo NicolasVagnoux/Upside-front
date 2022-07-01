@@ -9,6 +9,9 @@ module.exports = {
         aquatic:
           "url('https://www.sciencenewsforstudents.org/wp-content/uploads/2019/11/860-header-non-dinos2.jpg')",
       },
+      screens: {
+        bp1: { max: "900px" },
+      },
       fontFamily: {
         text: "'Helvetica'",
         title: "'Lato', 'sans-serif'",

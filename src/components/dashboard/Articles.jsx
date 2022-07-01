@@ -20,9 +20,9 @@ import "swiper/css/pagination";
 
 const Articles = () => {
   return (
-    <div className="flex flex-wrap items-center m-10">
-      <div className="w-full m-auto">
-        <Card color="paper" className=" w-full cursor-pointer">
+    <div className="flex flex-wrap items-center m-10 bp1:hidden">
+      <div className="w-full m-auto bp1:hidden">
+        <Card color="paper" className=" w-full cursor-pointer bp1:hidden">
           <CardContent>
             <>
               <Swiper

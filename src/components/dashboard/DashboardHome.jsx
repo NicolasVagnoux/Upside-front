@@ -23,7 +23,7 @@ const DashboardHome = () => {
         <ClientCard />
         <ClientCard />
         <ClientCard />
-        <Articles />
+        <Articles className="bp1:hidden" />
       </Fade>
     </div>
   );

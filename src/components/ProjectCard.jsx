@@ -18,7 +18,7 @@ const ProjectCard = ({
 }) => {
   const daysLeft = () => {
     const date =
-      (new Date(finalDate).getTime() - new Date(startDate).getTime()) /
+      (new Date(finalDate).getTime() - new Date().getTime()) /
       (1000 * 3600 * 24);
     return Math.round(date);
   };
@@ -65,12 +65,32 @@ const ProjectCard = ({
       {/* <p>{startDate.slice(0, 10).split("-").reverse().join("/")}</p>
       <p>{finalDate.slice(0, 10).split("-").reverse().join("/")}</p> */}
       <div className="flex flex-col-reverse items-center justify-around">
-        <ProgressBar bgcolor="red" completed={progress} />
+        {/* si la progression affiche plus de 50%, affiche-moi une barre de progression qui sera verte, sinon elle sera rouge*/}
+        {progress > 50 ? (
+          <ProgressBar bgcolor="green" completed={progress} />
+        ) : (
+          <ProgressBar bgcolor="red" completed={progress} />
+        )}
+
         <p className="text-xs text-slate-400">{progress}%</p>
       </div>
       <div className="flex justify-between w-full">
-        <p className="flex gap-1 px-2 py-0.5 rounded-md bg-gray-400/25 text-slate-500 text-xs items-center">
-          <img src="../../icons/time.png" alt="icon" className="w-5" />
+        <p
+          className={
+            daysLeft() < 100
+              ? `flex gap-1 px-2 py-0.5 rounded-md bg-red-300/40 text-red-800 text-xs items-center`
+              : `flex gap-1 px-2 py-0.5 rounded-md bg-gray-400/25 text-slate-500 text-xs items-center`
+          }
+        >
+          <img
+            src={
+              daysLeft() < 100
+                ? "../../icons/warning.png"
+                : "../../icons/time.png"
+            }
+            alt="icon"
+            className="w-4"
+          />
           {daysLeft()} days left
         </p>
         <p className="flex items-center text-xs">

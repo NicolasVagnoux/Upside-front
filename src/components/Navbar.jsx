@@ -5,7 +5,7 @@ import navbar from "../../data/navbar";
 const Navbar = () => {
   return (
     // Navbar complète
-    <div className="fixed py-4 h-full w-[80px] bg-[#183650] flex flex-col justify-between items-center">
+    <div className="fixed py-4 left-0 h-full w-[80px] bg-[#183650] flex flex-col justify-between items-center">
       <img
         className="w-[50px] shadow-2xl"
         src="./assets/upside.png"
@@ -15,12 +15,8 @@ const Navbar = () => {
       <ul className="flex flex-col items-center justify-center gap-8">
         {navbar &&
           navbar.map((item) => (
-            <Link to={item.link}>
-              <img
-                className="w-[25px] shadow-2xl hover:scale-110 transition"
-                src={item.src}
-                alt="img"
-              />
+            <Link key={item.id} to={item.link}>
+              <img className="w-[25px] logo-shadow" src={item.src} alt="img" />
             </Link>
           ))}
       </ul>

@@ -13,7 +13,6 @@ const ProjectList = ({ containsWord, company, sorted }) => {
     };
     getProjectList();
   }, []);
-  console.log(projectList);
 
   return (
     <div className="flex flex-wrap gap-4 pt-16">

@@ -5,11 +5,13 @@ import ClientCard from "./ClientCard";
 import Welcome from "./Welcome";
 import Fade from "react-reveal/Fade";
 import Navbar from "../Navbar";
+import ClientNav from "./ClientNav";
 
 const DashboardHome = () => {
   return (
     <div className="flex pl-20 flex-wrap justify-between overflow-hidden">
       <Navbar />
+      <ClientNav />
       <Welcome />
       <Fade big className="w-full">
         <div className="w-full">

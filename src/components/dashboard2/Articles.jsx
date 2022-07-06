@@ -24,7 +24,7 @@ const Articles = () => {
       <div className="w-full m-auto bp1:hidden">
         <Card color="paper" className=" w-full cursor-pointer bp1:hidden">
           <CardContent>
-            <>
+            <div>
               <Swiper
                 direction="vertical"
                 pagination={{
@@ -220,7 +220,7 @@ const Articles = () => {
                   </Box>
                 </SwiperSlide>
               </Swiper>
-            </>
+            </div>
           </CardContent>
         </Card>
       </div>

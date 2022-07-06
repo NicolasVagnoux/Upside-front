@@ -26,7 +26,8 @@ const ClientProjectCard = ({
 
   const deleteProject = async () => {
     try {
-      await axios.delete(`http://localhost:3000/api/projects/${id}`);
+      console.log(import.meta.env.VITE_DB_URL);
+      await axios.delete(`${import.meta.env.VITE_DB_URL}api/projects/${id}`);
       setDeleteModal(false);
       window.location.reload(false);
     } catch (err) {

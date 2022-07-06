@@ -8,7 +8,9 @@ const ClientProjectList = () => {
 
   useEffect(() => {
     const getProjectList = async () => {
-      const { data } = await axios.get(`http://localhost:3000/api/projects`);
+      const { data } = await axios.get(
+        `${import.meta.env.VITE_DB_URL}api/projects`
+      );
       setProjectList(data);
     };
     getProjectList();
@@ -19,7 +21,7 @@ const ClientProjectList = () => {
       {projectList &&
         projectList
           // filtre par company/client
-          .filter((element) => element.client === "Saft")
+          .filter(({ client }) => client === "Saft")
           .map((project, index) => (
             <ClientProjectCard key={index} {...project} />
           ))}

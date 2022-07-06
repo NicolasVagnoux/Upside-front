@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import axios from "axios";
-import ProgressBar from "./ProgressBar";
+import ProgressBar from "../ProgressBar";
 
-const ProjectCard = ({
+const ClientProjectCard = ({
   id,
   client,
   nameProject,
@@ -26,6 +26,7 @@ const ProjectCard = ({
 
   const deleteProject = async () => {
     try {
+      console.log(import.meta.env.VITE_DB_URL);
       await axios.delete(`${import.meta.env.VITE_DB_URL}api/projects/${id}`);
       setDeleteModal(false);
       window.location.reload(false);
@@ -35,7 +36,7 @@ const ProjectCard = ({
   };
 
   return (
-    <div className="bg-white w-[300px] h-[350px] rounded-lg flex flex-col justify-between items-start shadow-lg px-6 py-6 relative">
+    <div className="bg-slate-50 w-[300px] h-[350px] rounded-lg flex flex-col justify-between items-start shadow-lg px-6 py-6 relative">
       <button
         onClick={() => {
           setDeleteModal(true);
@@ -121,7 +122,7 @@ const ProjectCard = ({
   );
 };
 
-ProjectCard.propTypes = {
+ClientProjectCard.propTypes = {
   id: PropTypes.number.isRequired,
   client: PropTypes.string.isRequired,
   industryTag: PropTypes.string.isRequired,
@@ -134,4 +135,4 @@ ProjectCard.propTypes = {
   progress: PropTypes.number.isRequired,
 };
 
-export default ProjectCard;
+export default ClientProjectCard;

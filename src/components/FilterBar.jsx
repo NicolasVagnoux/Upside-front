@@ -12,7 +12,8 @@ const FilterBar = ({
     "Orange",
     "Pellenc",
     "Ariane group",
-    "Hololens",
+    "Microsoft hololens",
+    "Saft",
     "Wild Code Scool",
     "SNCF",
     "EDF",
@@ -27,7 +28,7 @@ const FilterBar = ({
         <input
           type="text"
           placeholder=" 🔍  Search a project"
-          className="w-56 align-middle rounded bg-slate-200 h-8"
+          className="w-56 h-8 align-middle rounded bg-slate-200"
           value={containsWord}
           onChange={(e) => handleContainsWord(e)}
         />

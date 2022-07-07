@@ -65,7 +65,6 @@ const AddProject = () => {
       console.error(err);
     }
   };
-  console.log(createdCard);
 
   return (
     <>
@@ -80,10 +79,8 @@ const AddProject = () => {
             className="ml-12 w-[750px] h-[540px] mt-8 rounded-lg shadow-2xl flex font-text flex-col justify-around items-center"
           >
             <div className="flex w-[90%] justify-between">
-              {" "}
               {/* Nom + Client */}
               <div className="flex flex-col w-[45%]">
-                {" "}
                 {/* Nom */}
                 <label htmlFor="name">Nom du projet :</label>
                 <input
@@ -98,7 +95,6 @@ const AddProject = () => {
                 />
               </div>
               <div className="flex flex-col w-[45%]">
-                {" "}
                 {/* Client */}
                 <label htmlFor="client">Client :</label>
                 <input
@@ -114,10 +110,8 @@ const AddProject = () => {
               </div>
             </div>
             <div className="flex w-[90%] justify-between">
-              {" "}
               {/* Type + Project Manager */}
               <div className="flex flex-col w-[45%]">
-                {" "}
                 {/* Type */}
                 <label htmlFor="type">Type de projet :</label>
                 <input
@@ -132,7 +126,6 @@ const AddProject = () => {
                 />
               </div>
               <div className="flex flex-col w-[45%]">
-                {" "}
                 {/* Project Manager */}
                 <label htmlFor="projectmanager">Project Manager :</label>
                 <input
@@ -148,10 +141,8 @@ const AddProject = () => {
               </div>
             </div>
             <div className="flex w-[90%] justify-between">
-              {" "}
               {/* Filiale + Image */}
               <div className="flex flex-col w-[45%]">
-                {" "}
                 {/* Filiale */}
                 <label htmlFor="subsidiary">Filiale :</label>
                 <input
@@ -166,7 +157,6 @@ const AddProject = () => {
                 />
               </div>
               <div className="flex flex-col w-[45%]">
-                {" "}
                 {/* Image */}
                 <label htmlFor="image">Image (url) :</label>
                 <input
@@ -182,7 +172,6 @@ const AddProject = () => {
               </div>
             </div>
             <div className="flex flex-col w-[90%]">
-              {" "}
               {/* Description */}
               <label htmlFor="description">Description du projet :</label>
               <textarea
@@ -197,10 +186,8 @@ const AddProject = () => {
               />
             </div>
             <div className="flex w-[90%] justify-between">
-              {" "}
               {/* DateDébut + DateFin */}
               <div className="flex flex-col w-[45%]">
-                {" "}
                 {/* DateDébut */}
                 <label htmlFor="startdate">Date de début (YYYY/MM/JJ) :</label>
                 <input
@@ -215,7 +202,6 @@ const AddProject = () => {
                 />
               </div>
               <div className="flex flex-col w-[45%]">
-                {" "}
                 {/* DateFin */}
                 <label htmlFor="enddate">Date de fin (YYYY/MM/JJ) :</label>
                 <input

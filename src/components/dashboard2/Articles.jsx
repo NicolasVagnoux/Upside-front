@@ -12,9 +12,8 @@ import Paper from "@mui/material/Paper";
 import { Pagination, Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
+import "swiper/swiper-bundle.min.css";
+import "swiper/swiper.min.css";
 
 // ----------------------------------------------
 

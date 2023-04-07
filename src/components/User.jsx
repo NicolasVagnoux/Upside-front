@@ -6,14 +6,11 @@ const User = () => {
 
   useEffect(() => {
     const getUsersList = async () => {
-      const { data } = await axios.get(
-        `${import.meta.env.VITE_DB_URL}api/users`
-      );
+      const { data } = await axios.get(`${import.meta.env.VITE_DB_URL}/api/users`);
       setUsers(data);
     };
     getUsersList();
   }, []);
-  console.log(users);
 
   return (
     <div>

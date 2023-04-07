@@ -8,20 +8,18 @@ const ClientProjectList = () => {
 
   useEffect(() => {
     const getProjectList = async () => {
-      const { data } = await axios.get(
-        `${import.meta.env.VITE_DB_URL}api/projects`
-      );
+      const { data } = await axios.get(`${import.meta.env.VITE_DB_URL}/api/projects`);
       setProjectList(data);
     };
     getProjectList();
   }, []);
 
   return (
-    <div className="flex flex-wrap gap-4 pl-10 pb-10">
+    <div className="flex flex-wrap gap-4 pb-10 pl-10">
       {projectList &&
         projectList
           // filtre par company/client
-          .filter(({ client }) => client === "Saft")
+          .filter((element) => element.client === "saft")
           .map((project, index) => (
             <ClientProjectCard key={index} {...project} />
           ))}

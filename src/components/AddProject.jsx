@@ -31,19 +31,19 @@ const AddProject = () => {
     try {
       e.preventDefault();
       const { data } = await axios.post(
-        `http://localhost:3000/api/projects`,
+        `${import.meta.env.VITE_DB_URL}/api/projects`,
         {
           nameProject: name,
           image,
-          projectDesc: description,
+          projectdesc: description,
           client,
           subsidiary,
-          startDate,
-          finalDate: endDate,
+          startdate: startDate,
+          finaldate: endDate,
           progress: 0,
           industryTag: type,
           color: "lightblue",
-          projectManager,
+          projectManager
         },
         {
           method: "POST",

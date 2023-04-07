@@ -5,29 +5,36 @@ import ProjectCard from "./ProjectCard";
 
 const ProjectList = ({ containsWord, company, sorted }) => {
   const [projectList, setProjectList] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     const getProjectList = async () => {
-      const { data } = await axios.get(`http://localhost:3000/api/projects`);
+      setIsLoading(true);
+      const { data } = await axios.get(`${import.meta.env.VITE_DB_URL}/api/projects`);
       setProjectList(data);
+      setIsLoading(false);
     };
     getProjectList();
   }, []);
+  console.log(import.meta.env.VITE_DB_URL);
+
 
   return (
+    <>
+    {isLoading && <img src="../assets/loading.svg" alt='loading' className="w-[75px] h-[75px] absolute left-[50%] top-[50%] animate-spin" />}
     <div className="flex flex-wrap gap-4 pt-16">
       {projectList &&
         projectList
           // filtrer pour le search
           .filter(
             (element) =>
-              element.nameProject
+              element.nameproject
                 .toLowerCase()
                 .includes(containsWord.toLowerCase()) ||
               element.client
                 .toLowerCase()
                 .includes(containsWord.toLowerCase()) ||
-              element.projectDesc
+              element.projectdesc
                 .toLowerCase()
                 .includes(containsWord.toLowerCase()) ||
               !containsWord
@@ -44,18 +51,19 @@ const ProjectList = ({ containsWord, company, sorted }) => {
           .sort(function (a, b) {
             return (
               sorted === "daysleftup" &&
-              new Date(a.finalDate).getTime() - new Date(b.finalDate).getTime()
+              new Date(a.finaldate).getTime() - new Date(b.finaldate).getTime()
             );
           })
           .sort(function (a, b) {
             return (
               sorted === "daysleftdown" &&
-              new Date(b.finalDate).getTime() - new Date(a.finalDate).getTime()
+              new Date(b.finaldate).getTime() - new Date(a.finaldate).getTime()
             );
           })
 
           .map((project, index) => <ProjectCard key={index} {...project} />)}
     </div>
+    </>
   );
 };
 

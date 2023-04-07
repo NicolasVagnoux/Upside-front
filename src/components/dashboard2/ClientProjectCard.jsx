@@ -6,11 +6,11 @@ import ProgressBar from "../ProgressBar";
 const ClientProjectCard = ({
   id,
   client,
-  nameProject,
+  nameproject,
   image,
-  projectDesc,
-  industryTag,
-  projectManager,
+  projectdesc,
+  industrytag,
+  projectmanager,
   subsidiary,
   finalDate,
   progress,
@@ -26,7 +26,7 @@ const ClientProjectCard = ({
 
   const deleteProject = async () => {
     try {
-      await axios.delete(`http://localhost:3000/api/projects/${id}`);
+      await axios.delete(`${import.meta.env.VITE_DB_URL}/api/projects/${id}`);
       setDeleteModal(false);
       window.location.reload(false);
     } catch (err) {
@@ -49,17 +49,17 @@ const ClientProjectCard = ({
         <img src={image} alt="company logo" />
       </div>
       <h1 className="text-lg font-bold leading-none font-title">
-        {nameProject}
+        {nameproject}
       </h1>
       <h2 className="leading-none">{client}</h2>
-      <p className="overflow-hidden text-ellipsis	text-xs h-1/6 text-slate-400">
-        {projectDesc}{" "}
+      <p className="overflow-hidden text-xs text-ellipsis h-1/6 text-slate-400">
+        {projectdesc}{" "}
       </p>
       <p className="overflow-hidden text-xs leading-none text-slate-400">
-        Industry: {industryTag}
+        Industry: {industrytag}
       </p>
       <p className="overflow-hidden text-xs text-slate-400">
-        Contact: {projectManager}
+        Contact: {projectmanager}
       </p>
       <div className="flex flex-col-reverse items-center justify-around my-2">
         {progress > 50 ? (
@@ -124,13 +124,13 @@ const ClientProjectCard = ({
 ClientProjectCard.propTypes = {
   id: PropTypes.number.isRequired,
   client: PropTypes.string.isRequired,
-  industryTag: PropTypes.string.isRequired,
-  projectManager: PropTypes.string.isRequired,
-  nameProject: PropTypes.string.isRequired,
+  industrytag: PropTypes.string.isRequired,
+  projectmanager: PropTypes.string.isRequired,
+  nameproject: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
-  projectDesc: PropTypes.string.isRequired,
+  projectdesc: PropTypes.string.isRequired,
   subsidiary: PropTypes.string.isRequired,
-  finalDate: PropTypes.string.isRequired,
+  finaldate: PropTypes.string.isRequired,
   progress: PropTypes.number.isRequired,
 };
 

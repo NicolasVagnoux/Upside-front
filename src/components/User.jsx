@@ -11,7 +11,6 @@ const User = () => {
     };
     getUsersList();
   }, []);
-  console.log(users);
 
   return (
     <div>

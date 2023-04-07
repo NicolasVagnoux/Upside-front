@@ -12,9 +12,8 @@ import Paper from "@mui/material/Paper";
 import { Pagination, Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
+import "swiper/swiper-bundle.min.css";
+import "swiper/swiper.min.css";
 
 // ----------------------------------------------
 
@@ -24,7 +23,7 @@ const Articles = () => {
       <div className="w-full m-auto bp1:hidden">
         <Card color="paper" className=" w-full cursor-pointer bp1:hidden">
           <CardContent>
-            <>
+            <div>
               <Swiper
                 direction="vertical"
                 pagination={{
@@ -220,7 +219,7 @@ const Articles = () => {
                   </Box>
                 </SwiperSlide>
               </Swiper>
-            </>
+            </div>
           </CardContent>
         </Card>
       </div>

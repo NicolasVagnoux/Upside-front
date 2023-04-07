@@ -42,19 +42,19 @@ const ProjectList = ({ containsWord, company, sorted }) => {
           // filtre par company/client
           .filter((element) => element.client === company || !company)
           // trie selon les jours restants ou la progression du dossier
-          .sort(function (a, b) {
+          .sort((a, b) => {
             return sorted === "progressionup" && a.progress - b.progress;
           })
-          .sort(function (a, b) {
+          .sort((a, b) => {
             return sorted === "progressiondown" && b.progress - a.progress;
           })
-          .sort(function (a, b) {
+          .sort((a, b) => {
             return (
               sorted === "daysleftup" &&
               new Date(a.finaldate).getTime() - new Date(b.finaldate).getTime()
             );
           })
-          .sort(function (a, b) {
+          .sort((a, b) => {
             return (
               sorted === "daysleftdown" &&
               new Date(b.finaldate).getTime() - new Date(a.finaldate).getTime()

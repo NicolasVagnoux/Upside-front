@@ -21,7 +21,7 @@ const Articles = () => {
   return (
     <div className="flex flex-wrap items-center m-10 bp1:hidden">
       <div className="w-full m-auto bp1:hidden">
-        <Card color="paper" className=" w-full cursor-pointer bp1:hidden">
+        <Card color="paper" className="w-full cursor-pointer bp1:hidden">
           <CardContent>
             <div>
               <Swiper
@@ -44,14 +44,14 @@ const Articles = () => {
                       <img
                         src="https://apside.com/wp-content/uploads/2020/04/sncf-2-e1587645671724.jpg"
                         alt="train de la sncf"
-                        className="w-44 h-full bg-center"
+                        className="h-full bg-center w-44"
                       />
                     </Paper>
                     <Box className="flex flex-col ml-4">
                       <Typography
                         sx={{ fontSize: 14 }}
                         color="text.secondary"
-                        className="italic pb-2"
+                        className="pb-2 italic"
                       >
                         - Apside News -
                       </Typography>
@@ -90,14 +90,14 @@ const Articles = () => {
                       <img
                         src="https://apside.com/wp-content/uploads/2020/04/162-1.jpg"
                         alt="train de la sncf"
-                        className="w-44 h-full bg-center"
+                        className="h-full bg-center w-44"
                       />
                     </Paper>
                     <Box className="flex flex-col ml-4">
                       <Typography
                         sx={{ fontSize: 14 }}
                         color="text.secondary"
-                        className="italic pb-2"
+                        className="pb-2 italic"
                       >
                         - Apside News -
                       </Typography>
@@ -137,14 +137,14 @@ const Articles = () => {
                     <img
                       src="https://apside.com/wp-content/uploads/2020/02/JO.jpg"
                       alt="train de la sncf"
-                      className="w-44 bg-center"
+                      className="bg-center w-44"
                     />
 
                     <div className="flex flex-col ml-4">
                       <Typography
                         sx={{ fontSize: 14 }}
                         color="text.secondary"
-                        className="italic pb-2"
+                        className="pb-2 italic"
                       >
                         - Apside News -
                       </Typography>
@@ -182,14 +182,14 @@ const Articles = () => {
                       <img
                         src="https://apside.com/wp-content/uploads/2020/04/architecture-batiment.jpg"
                         alt="train de la sncf"
-                        className="w-44 h-full bg-center"
+                        className="h-full bg-center w-44"
                       />
                     </Paper>
                     <Box className="flex flex-col ml-4">
                       <Typography
                         sx={{ fontSize: 14 }}
                         color="text.secondary"
-                        className="italic pb-2"
+                        className="pb-2 italic"
                       >
                         - Apside News -
                       </Typography>

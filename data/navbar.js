@@ -14,16 +14,16 @@ const navbar = [
     src: "./assets/editer.svg",
     link: "/newproject",
   },
-  {
-    id: 4,
-    src: "./assets/commenter.svg",
-    link: "",
-  },
-  {
-    id: 5,
-    src: "./assets/time.svg",
-    link: "",
-  },
+  // {
+  //   id: 4,
+  //   src: "./assets/commenter.svg",
+  //   link: "",
+  // },
+  // {
+  //   id: 5,
+  //   src: "./assets/time.svg",
+  //   link: "",
+  // },
   {
     id: 6,
     src: "./assets/user.svg",
